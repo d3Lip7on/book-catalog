@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "Война и мир",
+    "description": "Эпический роман Льва Толстого о жизни русского общества во времена наполеоновских войн.",
+    "author": "Лев Толстой",
+    "published_date": "1869-01-01",
+    "image": "assets/book-photos/vojna_i_mir.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Преступление и наказание",
+    "description": "Психологический роман Фёдора Достоевского о моральных терзаниях студента Раскольникова.",
+    "author": "Фёдор Достоевский",
+    "published_date": "1866-01-01",
+    "image": "assets/book-photos/prestuplenie_i_nakazanie.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Мастер и Маргарита",
+    "description": "Мистический роман Михаила Булгакова о визите сатаны в Москву.",
+    "author": "Михаил Булгаков",
+    "published_date": "1967-01-01",
+    "image": "assets/book-photos/master_i_margarita.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Анна Каренина",
+    "description": "Трагическая история любви Анны Карениной и графа Вронского.",
+    "author": "Лев Толстой",
+    "published_date": "1877-01-01",
+    "image": "assets/book-photos/anna_karenina.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Обломов",
+    "description": "Роман Ивана Гончарова о ленивом дворянине Илье Обломове.",
+    "author": "Иван Гончаров",
+    "published_date": "1859-01-01",
+    "image": "assets/book-photos/oblomov.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Доктор Живаго",
+    "description": "Роман Бориса Пастернака о судьбе врача и поэта в годы революции.",
+    "author": "Борис Пастернак",
+    "published_date": "1957-01-01",
+    "image": "assets/book-photos/doktor_zivago.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Тихий Дон",
+    "description": "Роман Михаила Шолохова о жизни донских казаков в годы революции и гражданской войны.",
+    "author": "Михаил Шолохов",
+    "published_date": "1940-01-01",
+    "image": "assets/book-photos/tihiy_don.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Евгений Онегин",
+    "description": "Роман в стихах Александра Пушкина о жизни и любви молодого дворянина.",
+    "author": "Александр Пушкин",
+    "published_date": "1833-01-01",
+    "image": "assets/book-photos/evgeniy_onegin.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Дубровский",
+    "description": "Роман Александра Пушкина о благородном разбойнике Владимире Дубровском.",
+    "author": "Александр Пушкин",
+    "published_date": "1841-01-01",
+    "image": "assets/book-photos/dubrovskiy.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Белая гвардия",
+    "description": "Роман Михаила Булгакова о судьбе семьи Турбиных в годы гражданской войны.",
+    "author": "Михаил Булгаков",
+    "published_date": "1925-01-01",
+    "image": "assets/book-photos/belaya_gvardiya.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Пикник на обочине",
+    "description": "Фантастический роман братьев Стругацких о загадочной Зоне и сталкерах.",
+    "author": "Аркадий и Борис Стругацкие",
+    "published_date": "1972-01-01",
+    "image": "assets/book-photos/piknic_na_obochine.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Дети Арбата",
+    "description": "Роман Анатолия Рыбакова о жизни молодежи в Москве 1930-х годов.",
+    "author": "Анатолий Рыбаков",
+    "published_date": "1987-01-01",
+    "image": "assets/book-photos/deti_arbata.jpg"
+  },
+  {
+    "id": 13,
+    "title": "Золотой телёнок",
+    "description": "Сатирический роман Ильи Ильфа и Евгения Петрова о приключениях Остапа Бендера.",
+    "author": "Илья Ильф, Евгений Петров",
+    "published_date": "1931-01-01",
+    "image": "assets/book-photos/zolotoy_telenok.jpg"
+  },
+  {
+    "id": 14,
+    "title": "12 стульев",
+    "description": "Юмористический роман Ильи Ильфа и Евгения Петрова о поисках сокровищ в стульях.",
+    "author": "Илья Ильф, Евгений Петров",
+    "published_date": "1928-01-01",
+    "image": "assets/book-photos/12_stuliev.jpg"
+  },
+  {
+    "id": 15,
+    "title": "Недоросль",
+    "description": "Классическая комедия Дениса Фонвизина о воспитании и нравственности.",
+    "author": "Денис Фонвизин",
+    "published_date": "1782-01-01",
+    "image": "assets/book-photos/nederosol.jpg"
+  }
+]
