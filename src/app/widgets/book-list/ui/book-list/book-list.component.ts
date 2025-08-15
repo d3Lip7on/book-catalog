@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { IBook } from '../../../../entities/book/model/book.interface';
 import { BookCardComponent } from '../../../../entities/book/ui/book-card/book-card.component';
 
@@ -7,6 +7,7 @@ import { BookCardComponent } from '../../../../entities/book/ui/book-card/book-c
   imports: [BookCardComponent],
   templateUrl: './book-list.component.html',
   styleUrl: './book-list.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BookListComponent {
   books = input<IBook[]>([]);
