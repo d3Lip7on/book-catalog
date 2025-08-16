@@ -1,7 +1,12 @@
-<div class="h-full flex flex-col p-4 border border-gray-200 rounded-lg shadow-md bg-white gap-2">
-  <img [src]="book()?.image" [alt]="book()?.title" class="rounded-md object-contain h-96 mb-2" />
-  <h2 class="text-lg font-semibold mb-2">{{ book()?.title }}</h2>
-  <p><span class="font-bold">Автор:</span> {{ book()?.author }}</p>
-  <p><span class="font-bold">Дата публикации:</span> {{ book()?.publishedDate | date : "dd.MM.yyyy" }}</p>
-  <p class="line-clamp-2"><span class="font-bold">Описание:</span> {{ book()?.description }}</p>
-</div>
+<mat-card>
+  <img mat-card-image [src]="book()?.image" [alt]="book()?.title" class="object-contain h-80 mb-4 pt-2" />
+  <mat-card-content>
+    <h2 class="text-lg font-semibold mb-2">{{ book()?.title }}</h2>
+    <p><span class="font-bold">Автор:</span> {{ book()?.author }}</p>
+    <p><span class="font-bold">Дата публикации:</span> {{ book()?.publishedDate | date : "dd.MM.yyyy" }}</p>
+    <p class="line-clamp-2"><span class="font-bold">Описание:</span> {{ book()?.description }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-button [routerLink]="['/books', book()?.id]">Читать далее</a>
+  </mat-card-actions>
+</mat-card>
