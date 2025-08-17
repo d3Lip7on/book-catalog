@@ -1,11 +1,9 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { IBook } from '../../../../entities/book/model/book.interface';
-import { BookCardComponent } from '../../../../entities/book/ui/book-card/book-card.component';
-import { MatGridListModule } from '@angular/material/grid-list';
+import { Component, ChangeDetectionStrategy, input } from '@angular/core';
+import { BookCardComponent, IBook } from '@entities/book';
 
 @Component({
   selector: 'app-book-list',
-  imports: [BookCardComponent, MatGridListModule],
+  imports: [BookCardComponent],
   templateUrl: './book-list.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

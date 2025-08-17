@@ -1,5 +1,4 @@
 import { Component, input } from '@angular/core';
-
 import { IBook } from '../../model/book.interface';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';

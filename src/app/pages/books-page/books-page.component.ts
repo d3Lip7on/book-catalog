@@ -1,17 +1,17 @@
-import { Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import { IBook } from '../../entities/book/model/book.interface';
-import { BookService } from '../../entities/book/api/book.service';
-import { catchError, debounceTime, finalize, tap } from 'rxjs';
+import { IBook, BookService } from '@/entities/book';
+import { BookCreateDialogComponent } from '@/features/book-create';
+import { EDialogCloseStatus } from '@/shared';
+import { BookListComponent } from '@/widgets/book-list';
+import { Component, OnInit, signal, inject, DestroyRef } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { BookListComponent } from '../../widgets/book-list/ui/book-list/book-list.component';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatDialog } from '@angular/material/dialog';
-import { BookCreateDialogComponent } from '../../features/book-create/ui/book-create-dialog/book-create-dialog.component';
+import { ReactiveFormsModule, FormControl } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
-import { EDialogCloseStatus } from '../../shared/lib/dialog/dialog.types';
+import { MatDialog } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { tap, debounceTime, catchError, finalize } from 'rxjs';
+
 @Component({
   selector: 'app-books-page',
   imports: [

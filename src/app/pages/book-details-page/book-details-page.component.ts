@@ -1,12 +1,9 @@
-import { Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
-import { BookService } from '../../entities/book/api/book.service';
-import { ActivatedRoute } from '@angular/router';
-import { IBook } from '../../entities/book/model/book.interface';
-import { catchError, tap } from 'rxjs';
+import { BookDetailsCardComponent, IBook, BookService } from '@/entities/book';
+import { Component, OnInit, signal, inject, DestroyRef } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { RouterLink, RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
-import { BookDetailsCardComponent } from '../../entities/book/ui/book-details-card/book-details-card.component';
+import { RouterLink, RouterModule, ActivatedRoute } from '@angular/router';
+import { tap, catchError } from 'rxjs';
 
 @Component({
   selector: 'app-book-details-page',

@@ -1,8 +1,8 @@
+import { EDialogCloseStatus } from '@/shared';
 import { Component, inject } from '@angular/core';
-import { BookCreateFormComponent } from '../book-create-form/book-create-form.component';
 import { MatDialogRef } from '@angular/material/dialog';
-import { EDialogCloseStatus } from '../../../../shared/lib/dialog/dialog.types';
 import { ECreateBookFormAction } from '../../model/types';
+import { BookCreateFormComponent } from '../book-create-form/book-create-form.component';
 
 @Component({
   selector: 'app-book-create-dialog',

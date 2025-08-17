@@ -1,16 +1,16 @@
-import { Component, DestroyRef, inject, output, signal } from '@angular/core';
+import { BookService } from '@/entities/book';
+import { ICreateBook } from '@/entities/book/model/create-book.interface';
+import { Component, signal, output, inject, DestroyRef } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { tap, finalize } from 'rxjs';
+import { ECreateBookFormAction } from '../../model/types';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { provideNativeDateAdapter } from '@angular/material/core';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { BookService } from '../../../../entities/book/api/book.service';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { finalize, tap } from 'rxjs';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { ICreateBook } from '../../../../entities/book/model/create-book.interface';
-import { ECreateBookFormAction } from '../../model/types';
 
 @Component({
   selector: 'app-book-create-form',
