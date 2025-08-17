@@ -1,0 +1,51 @@
+<div class="flex flex-col gap-4 w-full">
+  <h2 class="text-xl font-medium py-3">Создать книгу</h2>
+  <form class="flex flex-col gap-2">
+    <mat-form-field appearance="fill">
+      <mat-label>Название книги</mat-label>
+      <input matInput [formControl]="bookForm.controls.title" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Автор</mat-label>
+      <input matInput [formControl]="bookForm.controls.author" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Выберите дату</mat-label>
+      <input matInput [matDatepicker]="picker" [formControl]="bookForm.controls.publishedDate" />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Описание</mat-label>
+      <textarea matInput [formControl]="bookForm.controls.description"></textarea>
+    </mat-form-field>
+    <div class="flex flex-col">
+      <div class="flex gap-4 items-center mb-2">
+        <label for="image">Фото</label>
+        @if (isFileLoading()) {
+        <mat-spinner diameter="20"></mat-spinner>
+        } @else {
+        <button class="self-start" mat-button type="button" (click)="fileInput.click()">Выбрать</button>
+        }
+      </div>
+
+      <!-- превью -->
+      @if (imagePreview()) {
+      <div class="mb-2">
+        <img class="size-[100px] object-cover object-center rounded-md" [src]="imagePreview()" alt="preview" />
+      </div>
+      }
+      <input id="image" #fileInput type="file" accept="image/*" (change)="onFileSelected($event)" hidden />
+    </div>
+
+    <div class="flex gap-2 self-end">
+      <button mat-button type="button" [disabled]="isSubmitting()" (click)="onCancelButtonClick()">Отмена</button>
+      <button mat-button type="button" [disabled]="isSubmitting()" (click)="onCreateButtonClick()">
+        @if (isSubmitting()) {
+        <mat-spinner diameter="20"></mat-spinner>
+        } @else { Создать }
+      </button>
+    </div>
+  </form>
+</div>
