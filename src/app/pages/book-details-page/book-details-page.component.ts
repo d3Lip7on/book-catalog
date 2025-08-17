@@ -12,7 +12,6 @@ import { BookDetailsCardComponent } from '../../entities/book/ui/book-details-ca
   selector: 'app-book-details-page',
   imports: [RouterLink, RouterModule, MatButtonModule, BookDetailsCardComponent],
   templateUrl: './book-details-page.component.html',
-  styleUrl: './book-details-page.component.scss',
 })
 export class BookDetailsPageComponent implements OnInit {
   book = signal<IBook | null>(null);

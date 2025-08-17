@@ -8,7 +8,6 @@ import { CommonModule } from '@angular/common';
   selector: 'app-book-details-card',
   imports: [MatCardModule, CommonModule],
   templateUrl: './book-details-card.component.html',
-  styleUrl: './book-details-card.component.scss',
 })
 export class BookDetailsCardComponent {
   book = input<IBook | null>();

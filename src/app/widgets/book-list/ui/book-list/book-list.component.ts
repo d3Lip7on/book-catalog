@@ -7,7 +7,6 @@ import { MatGridListModule } from '@angular/material/grid-list';
   selector: 'app-book-list',
   imports: [BookCardComponent, MatGridListModule],
   templateUrl: './book-list.component.html',
-  styleUrl: './book-list.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BookListComponent {

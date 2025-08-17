@@ -24,7 +24,6 @@ import { ECreateBookFormAction } from '../../model/types';
     MatProgressSpinnerModule,
   ],
   templateUrl: './book-create-form.component.html',
-  styleUrl: './book-create-form.component.scss',
 })
 export class BookCreateFormComponent {
   imagePreview = signal<string | null>(null);

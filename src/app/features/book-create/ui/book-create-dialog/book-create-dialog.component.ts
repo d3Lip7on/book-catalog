@@ -8,7 +8,6 @@ import { ECreateBookFormAction } from '../../model/types';
   selector: 'app-book-create-dialog',
   imports: [BookCreateFormComponent],
   templateUrl: './book-create-dialog.component.html',
-  styleUrl: './book-create-dialog.component.scss',
 })
 export class BookCreateDialogComponent {
   #dialogRef = inject(MatDialogRef<BookCreateDialogComponent>);

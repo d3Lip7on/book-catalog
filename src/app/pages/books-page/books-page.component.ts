@@ -23,7 +23,6 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatProgressSpinnerModule,
   ],
   templateUrl: './books-page.component.html',
-  styleUrl: './books-page.component.scss',
 })
 export class BooksPageComponent implements OnInit {
   books = signal<IBook[]>([]);

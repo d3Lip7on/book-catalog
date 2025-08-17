@@ -9,7 +9,6 @@ import { RouterModule } from '@angular/router';
   selector: 'app-book-card',
   imports: [CommonModule, MatCardModule, MatButtonModule, RouterModule],
   templateUrl: './book-card.component.html',
-  styleUrl: './book-card.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BookCardComponent {
