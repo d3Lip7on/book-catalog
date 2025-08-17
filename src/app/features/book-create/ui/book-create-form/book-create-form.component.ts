@@ -1,6 +1,6 @@
 import { BookService } from '@/entities/book';
 import { ICreateBook } from '@/entities/book/model/create-book.interface';
-import { Component, signal, output, inject, DestroyRef } from '@angular/core';
+import { Component, signal, output, inject, DestroyRef, ChangeDetectionStrategy } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -24,6 +24,7 @@ import { provideNativeDateAdapter } from '@angular/material/core';
     MatProgressSpinnerModule,
   ],
   templateUrl: './book-create-form.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BookCreateFormComponent {
   imagePreview = signal<string | null>(null);

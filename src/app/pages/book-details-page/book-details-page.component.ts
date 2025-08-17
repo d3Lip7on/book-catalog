@@ -1,5 +1,5 @@
 import { BookDetailsCardComponent, IBook, BookService } from '@/entities/book';
-import { Component, OnInit, signal, inject, DestroyRef } from '@angular/core';
+import { Component, OnInit, signal, inject, DestroyRef, ChangeDetectionStrategy } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -10,6 +10,7 @@ import { tap, catchError, finalize } from 'rxjs';
   selector: 'app-book-details-page',
   imports: [RouterLink, RouterModule, MatButtonModule, BookDetailsCardComponent, MatProgressSpinnerModule],
   templateUrl: './book-details-page.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BookDetailsPageComponent implements OnInit {
   book = signal<IBook | null>(null);

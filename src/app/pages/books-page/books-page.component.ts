@@ -2,7 +2,7 @@ import { IBook, BookService } from '@/entities/book';
 import { BookCreateDialogComponent } from '@/features/book-create';
 import { EDialogCloseStatus } from '@/shared';
 import { BookListComponent } from '@/widgets/book-list';
-import { Component, OnInit, signal, inject, DestroyRef } from '@angular/core';
+import { Component, OnInit, signal, inject, DestroyRef, ChangeDetectionStrategy } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ReactiveFormsModule, FormControl } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -23,6 +23,7 @@ import { tap, debounceTime, catchError, finalize } from 'rxjs';
     MatProgressSpinnerModule,
   ],
   templateUrl: './books-page.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BooksPageComponent implements OnInit {
   books = signal<IBook[]>([]);
